@@ -1,0 +1,12 @@
+$first-color: rgb(228, 99, 43);
+$second-color: rgb(74, 216, 61);
+$third-color: rgb(45, 169, 200);
+$first-color-shadow: rgb(120, 47, 15);
+$second-color-shadow: rgb(35, 135, 26);
+$third-color-shadow: rgb(40, 106, 122);
+
+:export {
+    firstColor: $first-color;
+    secondColor: $second-color;
+    thirdColor: $third-color;
+}

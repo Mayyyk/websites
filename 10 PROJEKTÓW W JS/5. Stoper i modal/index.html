@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Stoper i modal</title>
+		<script
+			src="https://kit.fontawesome.com/d518b40244.js"
+			crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="/css/main.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="icon-box">
+				<i class="fa-solid fa-paintbrush"></i>
+				<i class="fa-solid fa-question"></i>
+			</div>
+			<div class="colors">
+				<div class="color one"></div>
+				<div class="color two"></div>
+				<div class="color three"></div>
+			</div>
+			<div class="stopper">
+				<h1>Stoper</h1>
+				<p class="time">0:00</p>
+				<p class="last-time">Ostatni czas:</p>
+			</div>
+			<div class="button-box">
+				<button class="play-btn"><i class="fa-solid fa-play"></i></button>
+				<button class="pause-btn"><i class="fa-solid fa-pause"></i></button>
+				<button class="reset-btn"><i class="fa-solid fa-square"></i></button>
+				<button class="delete-btn"><i class="fa-solid fa-x"></i></button>
+				<button class="archieve-btn">archiwum</button>
+			</div>
+			<div class="archieve">
+				<ul class="archieve-ul">
+				</ul>
+			</div>
+		</div>
+		<div class="info-shadow">
+			<div class="info">
+				<h2>Instrukcja:</h2>
+				<p><i class="fa-solid fa-play"></i> - start</p>
+				<p><i class="fa-solid fa-pause"></i> - pauza</p>
+				<p><i class="fa-solid fa-square"></i> - stop</p>
+				<p>
+					<i class="fa-solid fa-x"></i> - skasuj wszystko (łącznie z archiwum)
+				</p>
+				<p><span>archiwum</span> - zobacz wcześniejsze pomiary</p>
+				<button class="close">zamknij</button>
+			</div>
+		</div>
+
+		<script src="/main.js"></script>
+	</body>
+</html>

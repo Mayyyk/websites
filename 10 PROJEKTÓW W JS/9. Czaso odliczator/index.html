@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Czaso odliczator</title>
+		<script
+			src="https://kit.fontawesome.com/d518b40244.js"
+			crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="/css/main.css" />
+	</head>
+	<body>
+		<div class="all">
+			<div class="wrapper">
+				<div class="img">
+					<button class="settings-btn">
+						<i class="fa-solid fa-sliders"></i>
+					</button>
+				</div>
+				<div class="body">
+					<p class="event">Nowe wydarzenie za:</p>
+					<div class="cards-box">
+						<div class="card">
+							<p class="number days">543</p>
+							<p>Dni</p>
+						</div>
+						<div class="card">
+							<p class="number hours">534</p>
+							<p>Godzin</p>
+						</div>
+						<div class="card">
+							<p class="number minutes">34</p>
+							<p>Minut</p>
+						</div>
+						<div class="card">
+							<p class="number seconds">76</p>
+							<p>Sekund</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="settings">
+				<h1>Ustawienia</h1>
+				<div class="settings-event">
+					<label for="name">Nazwa wydarzenia</label>
+					<input type="text" value="Wakacje" id="event" />
+				</div>
+				<div class="settings-date">
+					<table class="date">
+						<tr>
+							<td><label for="day">Dzień:</label></td>
+							<td><label for="month">Miesiąc:</label></td>
+							<td><label for="year">Rok:</label></td>
+						</tr>
+						<tr>
+							<td>
+								<input id="day" type="number" value="23" min="1" max="31" />
+							</td>
+							<td>
+								<input id="month" type="number" value="06" min="1" max="12" />
+							</td>
+							<td><input id="year" type="number" value="2023" min="2023" /></td>
+						</tr>
+					</table>
+				</div>
+				<div class="settings-link">
+					<label for="link">Link do obrazka:</label>
+					<input
+						type="text"
+						id="link"
+						value="/img/mountain-landscape-2031539_960_720.jpg" />
+				</div>
+				<button class="save">Zapisz</button>
+			</div>
+		</div>
+		<script src="/main.js"></script>
+	</body>
+</html>

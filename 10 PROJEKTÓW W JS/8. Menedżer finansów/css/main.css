@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+}
+
+button {
+  padding: 20px 40px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.wrapper .top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+}
+.wrapper .top h1 {
+  font-size: 70px;
+  font-weight: 200;
+}
+.wrapper .top p {
+  font-size: 25px;
+}
+.wrapper .body {
+  padding: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.wrapper .body .transactions {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+.wrapper .body .transactions h2 {
+  margin-bottom: 20px;
+  font-size: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+.wrapper .body .transactions .lists {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper .body .transactions .lists .income, .wrapper .body .transactions .lists .expenses {
+  padding: 20px;
+  border: 1px solid black;
+  width: 48%;
+}
+.wrapper .body .transactions .lists .income h3, .wrapper .body .transactions .lists .expenses h3 {
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.wrapper .body .transactions .lists .income ul, .wrapper .body .transactions .lists .expenses ul {
+  list-style: none;
+}
+.wrapper .body .transactions .lists .income ul li, .wrapper .body .transactions .lists .expenses ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+  font-size: 30px;
+}
+.wrapper .body .transactions .lists .income ul li span, .wrapper .body .transactions .lists .expenses ul li span {
+  font-weight: bold;
+}
+.wrapper .body .transactions .lists .income ul li .fa-x, .wrapper .body .transactions .lists .expenses ul li .fa-x {
+  cursor: pointer;
+}
+.wrapper .body .transactions .lists .income ul li button, .wrapper .body .transactions .lists .expenses ul li button {
+  padding: 5px 10px;
+  font-size: 30px;
+  border: 1px solid transparent;
+  transition: scale 0.2s;
+}
+.wrapper .body .transactions .lists .income ul li button:hover, .wrapper .body .transactions .lists .expenses ul li button:hover {
+  scale: 1.2;
+}
+.wrapper .body .transactions .lists .income h3 {
+  color: green;
+}
+.wrapper .body .transactions .lists .income span {
+  color: green;
+}
+.wrapper .body .transactions .lists .expenses h3 {
+  color: red;
+}
+.wrapper .body .transactions .lists .expenses span {
+  color: red;
+}
+.wrapper .body .rigth-panel {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 600px;
+  width: 500px;
+  border: 1px solid black;
+}
+.wrapper .body .rigth-panel .money, .wrapper .body .rigth-panel .style {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 40%;
+  width: 100%;
+}
+.wrapper .body .rigth-panel .money h2, .wrapper .body .rigth-panel .style h2 {
+  font-size: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+.wrapper .body .rigth-panel .money p, .wrapper .body .rigth-panel .style p {
+  text-align: center;
+  font-size: 50px;
+}
+.wrapper .body .rigth-panel .btn-box {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.wrapper .body .rigth-panel .btn-box button {
+  padding: 20px;
+}
+.wrapper .body .rigth-panel .style .circles {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.wrapper .body .rigth-panel .style .circles .circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.wrapper .body .rigth-panel .style .circles .dark {
+  background-color: black;
+}
+
+.popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0cbaba;
+  background-image: linear-gradient(315deg, #0c74ba 0%, #5212ba 74%);
+  visibility: hidden;
+}
+.popup .popup-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 1100px;
+}
+.popup .popup-wrapper h1 {
+  font-size: 50px;
+  color: #fff;
+  font-weight: 200;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.popup .popup-wrapper .input-box {
+  width: 100%;
+  margin-bottom: 40px;
+  color: #fff;
+}
+.popup .popup-wrapper .input-box h2, .popup .popup-wrapper .input-box p {
+  font-weight: lighter;
+}
+.popup .popup-wrapper .input-box p {
+  margin-bottom: 10px;
+}
+.popup .popup-wrapper .input-box input, .popup .popup-wrapper .input-box select {
+  padding: 10px 20px;
+  width: 100%;
+  font-size: 20px;
+}
+.popup .popup-wrapper .error {
+  margin-bottom: 40px;
+  font-size: 20px;
+  color: rgb(243, 122, 35);
+  visibility: hidden;
+}
+.popup .popup-wrapper .popup-btn-box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.popup .popup-wrapper .popup-btn-box button {
+  margin: 0 50px;
+  border-radius: 8px;
+  border: 3px solid white;
+  background: none;
+  color: #fff;
+  transition: color 0.3s, background 0.3s;
+}
+.popup .popup-wrapper .popup-btn-box button:hover {
+  background: #fff;
+  color: #000;
+}/*# sourceMappingURL=main.css.map */

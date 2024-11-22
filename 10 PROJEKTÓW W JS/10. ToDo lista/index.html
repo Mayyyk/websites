@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ToDo lista</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+			rel="stylesheet" />
+		<script
+			src="https://kit.fontawesome.com/d518b40244.js"
+			crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="/css/main.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="top">
+				<h1 class="top__title">todo list</h1>
+				<div class="top__add">
+					<input
+						type="text"
+						class="top__input"
+						placeholder="Podaj treść zadania..." />
+					<button class="top__add-btn">add</button>
+				</div>
+				<p class="top__error"></p>
+			</div>
+			<div class="body">
+				<h2 class="body__title">lista zadań</h2>
+				<p class="body__error">Brak zadań na liście!</p>
+				<ul class="body__ul">
+
+					<li class="body__li">
+						<span class="body__text">1111111</span>
+                        <div class="body__box">
+                            <button class="body__confirm-btn"><i class="fa-solid fa-check"></i></button>
+                            <button id="1" class="body__edit-btn">edit</button>
+                            <button class="body__delete-btn"><i class="fa-solid fa-x"></i></button>
+                        </div>
+					</li>
+					<li class="body__li">
+						<span class="body__text">22222</span>
+                        <div class="body__box">
+                            <button class="body__confirm-btn"><i class="fa-solid fa-check"></i></button>
+                            <button id="2" class="body__edit-btn">edit</button>
+                            <button class="body__delete-btn"><i class="fa-solid fa-x"></i></button>
+                        </div>
+					</li>
+					<li class="body__li">
+						<span class="body__text">333333</span>
+                        <div class="body__box">
+                            <button class="body__confirm-btn"><i class="fa-solid fa-check"></i></button>
+                            <button id="3" class="body__edit-btn">edit</button>
+                            <button class="body__delete-btn"><i class="fa-solid fa-x"></i></button>
+                        </div>
+					</li>
+					<li class="body__li">
+						<span class="body__text">4444444</span>
+                        <div class="body__box">
+                            <button class="body__confirm-btn"><i class="fa-solid fa-check"></i></button>
+                            <button id="4" class="body__edit-btn">edit</button>
+                            <button class="body__delete-btn"><i class="fa-solid fa-x"></i></button>
+                        </div>
+					</li>
+				</ul>
+			</div>
+		</div>
+        <div class="popup">
+            <h3 class="popup__title">Edytuj zadanie:</h3>
+            <input type="text" class="popup__input" placeholder="Wpisz nową treść zadania...">
+            <div class="popup__btn-box">
+                <button class="popup__save-btn">zatwierdź</button>
+                <button class="popup__cancel-btn">anuluj</button>
+            </div>
+            <p class="popup__error">Zmień treść zadania!</p>
+        </div>
+		<script src="/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,249 @@
+@use "/variables.scss" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #444
+}
+
+button {
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    border: 2px solid $first-color;
+    background: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+button:hover, button:focus {
+    background-color: $first-color;
+    outline: none;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    min-height: 400px;
+    background-color: #5E5E5E;
+    color: #fff;
+    overflow: hidden;
+    border-radius: 8px;
+
+    .colors {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        top: 20%;
+        width: 40px;
+        height: 40%;
+        background: none;
+        border: 2px solid white;
+        border-radius: 8px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right: none;
+
+        .color {
+            width: 27px;
+            height: 27px;
+            border-radius: 50%;
+            z-index: 1;
+            transition: background-color .2s;
+            cursor: pointer;
+        }
+
+        .one {
+            background-color: $first-color;
+        }
+
+        .two{
+            background-color: $second-color;
+        }
+
+        .three {
+            background-color: $third-color;
+        }
+
+        .one:hover {
+            background-color: $first-color-shadow;
+        }
+
+        .two:hover {
+            background-color: $second-color-shadow;
+        }
+
+        .three:hover {
+            background-color: $third-color-shadow;
+        }
+    }
+    
+    .icon-box {
+        display: flex;
+        justify-content: flex-end;
+
+        i {
+            display: block;
+            padding: 20px;
+            margin: 0 5px;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: color .3s;
+        }
+
+        i:hover {
+            color: $first-color;
+        }
+    }
+
+    .stopper {
+        position: relative;
+        height: 40%;
+        text-align: center;
+        font-size: 3rem;
+        
+        h1 {
+            top: 0;
+            font-weight: lighter;
+            font-size: 5rem;
+            margin-bottom: 15px;
+        }
+
+        .time {
+            font-size: 6rem;
+            color: $first-color;
+        }
+        
+        .last-time {
+            visibility: hidden;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+    }
+
+    .button-box {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        width: 80%;
+
+
+        button {
+            padding: 10px 20px;
+            width: 20%;
+        }
+
+        .archieve-btn {
+            padding: 6px;
+            margin: 10px auto;
+            width: 100%;
+            text-transform: uppercase;
+        }
+    }
+
+    .archieve {
+        margin: 0 auto;
+
+        .archieve-ul {
+            list-style: none;
+
+            span {
+                font-weight: bold;
+            }
+
+            li {
+                display: flex;
+                justify-content: flex-start;
+                margin-bottom: 5px;
+
+                span {
+                    display: block;
+                    margin-left: 10px;
+                }
+
+            }
+
+            li:last-child {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+}
+
+.info-shadow {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    .info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px 20px;
+        width: 500px;
+        height: 300px;
+        padding: 30px 60px;
+        border-radius: 8px;
+        background-color: rgba(245,245,245);
+        
+
+        h2 {
+            font-size: 30px;
+        }
+        
+        i, span {
+            color: $first-color;
+            font-weight: bold;
+        }
+
+        .close {
+            display: block;
+            padding: 5px 20px;
+            margin: 40px auto 0;
+            box-shadow: 0 2px 2px $first-color;
+            color: #000;
+            width: 200px;
+        }
+
+        p{
+            margin: 5px 10px;
+        }
+    }
+}
+
+.info-animation {
+    animation: showInfo .5s;
+}
+
+@keyframes showInfo {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

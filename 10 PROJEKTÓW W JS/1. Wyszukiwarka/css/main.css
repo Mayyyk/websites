@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.hide {
+  display: none;
+}
+
+.search-machine {
+  width: 800px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 12px black;
+}
+.search-machine__shadow-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+.search-machine__header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+  padding: 1.5em;
+  width: 100%;
+  height: 40%;
+  min-height: 40%;
+  background-image: url("/img/red-wine-g445be6d2e_1920.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+.search-machine__header h1 {
+  font-family: "Julee", cursive;
+  font-size: 4.6rem;
+  color: #fff;
+  z-index: 1;
+}
+.search-machine__header input {
+  padding: 10px 5px;
+  margin: 2em auto;
+  width: 100%;
+  border-radius: 8px;
+  z-index: 1;
+}
+.search-machine__body {
+  position: relative;
+  overflow: scroll;
+}
+.search-machine__body h2 {
+  padding: 2em 1em;
+  padding-bottom: 0;
+}
+.search-machine__body ul {
+  margin: 2em;
+  list-style: none;
+}
+.search-machine__body ul li {
+  padding: 6px;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+}/*# sourceMappingURL=main.css.map */

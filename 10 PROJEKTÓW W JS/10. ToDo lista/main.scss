@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    margin-top: 100px;
+    width: 700px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+    border-radius: 10px;
+    overflow: hidden;
+
+    .top { 
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        color: #fff;
+        background-color: #9fa4c4;
+        background-image: linear-gradient(315deg, #9fa4c4 0%, #9e768f 74%);
+
+
+        &__title {
+            font-size: 40px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        &__input {
+            padding: 10px 20px;
+            margin: 0 20px;
+            width: 400px;
+            border-radius: 10px;
+            border: 1px solid transparent;
+        }
+
+        &__add {
+            margin: 20px 0;
+        }
+
+        &__error {
+            color: #000000;
+            position: absolute;
+            bottom: 20px;
+        }
+        
+        &__add-btn {
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: background-color .2s;
+        }
+
+        &__add-btn:hover {
+            background-color: gray;
+        }
+    }
+
+    .body {
+        padding: 20px;
+
+        &__title {
+            margin: 10px 0;
+            text-align: center;
+            font-size: 25px;
+            text-transform: uppercase;
+            
+        }
+
+        &__error {
+            color: #9fa4c4;
+            text-align: center;
+        }
+
+        &__ul {
+            list-style: none;
+        }
+
+        &__li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            margin: 20px 0;
+            background-color: #d3d3d3;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+
+        &__text--done {
+            text-decoration:line-through;
+            font-style: italic;
+            color: #5d5d5d;
+        }
+
+        &__box {
+            width: 20%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        &__confirm-btn, &__delete-btn, &__edit-btn {
+            padding: 5px 10px;
+            font-size: 20px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        &__confirm-btn {
+            color: green;
+        }
+
+        &__edit-btn {
+            color: #9fa4c4;
+        }
+
+        &__delete-btn {
+            color: rgb(168, 47, 47);
+        }
+
+        &__confirm-btn:hover {
+            color: rgb(0, 85, 0);
+        }
+
+        &__edit-btn:hover {
+            color: #737794;
+        }
+
+        &__delete-btn:hover {
+            color: rgb(99, 0, 0);
+        }
+
+        i {
+            pointer-events: none;
+        }
+    }
+}
+
+.popup {
+    position: absolute;
+    padding: 20px;
+    bottom: 100px;
+    width: 800px;
+    height: 220px;
+    background-color: #9fa4c4;
+    background-image: linear-gradient(315deg, #9fa4c4 0%, #9e768f 74%);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+    display: none;
+
+    &__title {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    &__input {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        width: 80%;
+        border-radius: 10px;
+        border: 1px solid transparent;
+    }
+
+    &__btn-box {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    &__save-btn, &__cancel-btn  {
+        padding: 10px 20px;
+        text-transform: uppercase;
+        margin: 0 10px;
+        width: 150px;
+        border-radius: 10px;
+        border: 1px solid transparent;
+        cursor: pointer;
+        transition: background-color .2s;
+    }
+
+    &__save-btn:hover, &__cancel-btn:hover {
+        background-color: gray;
+    }
+
+    &__error {
+        margin-top: 15px;
+        text-align: center;
+        display: none;
+    }
+}

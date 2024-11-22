@@ -1,0 +1,337 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-family: "Noto Sans", sans-serif;
+  height: 100vh;
+  color: #fff;
+  z-index: -2;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.wrapper {
+  position: relative;
+  width: 1400px;
+}
+
+.decoration-box {
+  position: relative;
+}
+.decoration-box .title {
+  display: block;
+  margin-left: 110px;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: #fbd784;
+}
+
+.decoration-box::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 1em;
+  width: 70px;
+  height: 3px;
+  background-color: #fbd784;
+  z-index: 1;
+}
+
+header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  font-weight: bold;
+}
+header .left,
+header .right {
+  top: 2em;
+}
+header .left {
+  margin-left: 2em;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+header .right {
+  margin-right: 2em;
+  font-size: 1.6rem;
+}
+header .right i {
+  margin-right: 20px;
+}
+header .nav li {
+  display: inline;
+  margin: 20px;
+  font-size: 1.6rem;
+}
+
+.bg-shadow {
+  position: absolute;
+  width: 100%;
+  height: 150vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 10%, rgb(11, 29, 38) 100%);
+}
+
+main {
+  position: relative;
+  width: 100%;
+  z-index: -1;
+}
+main .hero-area {
+  background-image: url("/img/pexels-andrei-tanase-1271619.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 150vh;
+  width: 100%;
+}
+main .hero-area .left {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50vh;
+  transform: translateY(-50%);
+  left: 2em;
+  font-size: 1.6rem;
+  z-index: 1;
+}
+main .hero-area .left .rotate {
+  font-weight: bold;
+}
+main .hero-area .left a {
+  padding: 20px;
+  font-size: 3rem;
+  text-align: center;
+  color: #fff;
+}
+main .hero-area .right {
+  position: absolute;
+  top: 30em;
+  right: 10em;
+  z-index: 1;
+}
+main .hero-area .right .hero {
+  list-style: none;
+}
+main .hero-area .right .hero li {
+  font-size: 3rem;
+  text-align: right;
+  line-height: 5rem;
+}
+main .hero-area .right::before,
+main .hero-area .right::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  width: 3px;
+  right: -20px;
+}
+main .hero-area .right::before {
+  height: 20em;
+  background-color: #9e9e9e;
+}
+main .hero-area .right::after {
+  height: 5em;
+  background-color: #fff;
+}
+main .hero-area .center {
+  padding-left: 10em;
+  position: absolute;
+  top: 30em;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+main .hero-area .center h1 {
+  font-family: "Noto Serif KR", serif;
+  margin: 20px 0;
+  font-size: 7rem;
+}
+main .hero-area .center .scroll {
+  font-size: 2rem;
+}
+main .hero-area .center .scroll i {
+  margin: 0 0.5em;
+  font-size: 2.5rem;
+}
+main .hero-area .gradient {
+  position: absolute;
+  width: 100%;
+  height: 50em;
+  bottom: 0;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(11, 29, 38) 100%);
+}
+main .posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0b1d26;
+}
+main .posts .one,
+main .posts .two,
+main .posts .three {
+  display: flex;
+  padding: 2em;
+  width: 100%;
+  margin-bottom: 250px;
+}
+main .posts .one .text,
+main .posts .two .text,
+main .posts .three .text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .posts .one .text .decoration-box::before,
+main .posts .two .text .decoration-box::before,
+main .posts .three .text .decoration-box::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 1em;
+}
+main .posts .one .text .number,
+main .posts .two .text .number,
+main .posts .three .text .number {
+  font-family: "Roboto", sans-serif;
+  position: absolute;
+  left: -7px;
+  top: 150px;
+  font-size: 20em;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+}
+main .posts .one .text h2,
+main .posts .two .text h2,
+main .posts .three .text h2 {
+  font-family: "Noto Serif KR", serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 20px 0;
+  font-size: 5rem;
+}
+main .posts .one .text .post-text,
+main .posts .two .text .post-text,
+main .posts .three .text .post-text {
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  letter-spacing: 1px;
+}
+main .posts .one .text a,
+main .posts .two .text a,
+main .posts .three .text a {
+  margin-top: 15px;
+  text-decoration: none;
+}
+main .posts .one .text a .read-more,
+main .posts .two .text a .read-more,
+main .posts .three .text a .read-more {
+  font-size: 1.4rem;
+  color: #fbd784;
+}
+main .posts .one .text a i,
+main .posts .two .text a i,
+main .posts .three .text a i {
+  margin-left: 30px;
+}
+main .posts .one .img,
+main .posts .two .img,
+main .posts .three .img {
+  margin-left: 40px;
+  height: 900px;
+}
+main .posts .two {
+  flex-direction: row-reverse;
+}
+main .posts .two .img {
+  margin-left: 0;
+  margin-right: 40px;
+}
+main .posts .three {
+  margin-bottom: 100px;
+}
+
+footer {
+  padding-bottom: 0px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(11, 29, 38);
+}
+footer .wrapper {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+footer .wrapper .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+footer .wrapper .left h3 {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+footer .wrapper .left .motto {
+  margin-top: 20px;
+  width: 400px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+footer .wrapper .left .copy {
+  margin-top: 100px;
+  justify-self: flex-end;
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+footer .wrapper .footer-right,
+footer .wrapper .footer-left {
+  list-style: none;
+}
+footer .wrapper .footer-right li,
+footer .wrapper .footer-left li {
+  margin: 20px 0;
+  font-size: 1.8rem;
+}
+footer .wrapper .footer-right li a,
+footer .wrapper .footer-left li a {
+  color: #fff;
+  text-decoration: none;
+}
+footer .wrapper .footer-right .special,
+footer .wrapper .footer-left .special {
+  margin-top: 0;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #000;
+}
+footer .wrapper .footer-right .special a,
+footer .wrapper .footer-left .special a {
+  color: #fbd784;
+}
+footer .wrapper .footer-left {
+  margin-left: 150px;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+}
+
+.settings-btn:hover {
+    background-color: black;
+    color: #fff;
+}
+
+.all {
+    position: relative;
+
+    .settings {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: absolute;
+        padding: 20px;
+        width: 350px;
+        height: 400px;
+        top: 0;
+        right: 0;
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: #fff;
+        text-align: center;
+        opacity: 0;
+        z-index: 0;
+    
+        h1 {
+            font-size: 35px;
+            text-transform: uppercase;
+        }
+    
+        input {
+            padding: 5px 10px;
+            width: 100%;
+            height: 35px;
+        }
+    
+        button {
+            margin: 0 auto;
+            padding: 5px 10px;
+            width: 100px;
+            height: 40px;
+            cursor: pointer;
+        }
+    
+        table {
+            td {
+                width: 33%;
+            }
+        }
+    }
+    
+    .wrapper {
+        
+        width: 800px;
+        height: 600px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+        background-color: #fff;
+        z-index: 10;
+
+        .img {
+            position: relative;
+            width: 100%;
+            height: 50%;
+            background-image: url('/img/mountain-landscape-2031539_960_720.jpg');
+            background-size: cover;
+            background-position: center;
+    
+            button {
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 10px;
+                margin: 15px;
+                font-size: 30px;
+                border-radius: 10px;
+                cursor: pointer;
+                border: 1px solid black;
+                z-index: 10;
+                transition: background-color .3s, color .3s;
+            }
+        }
+    
+        .body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 20px;
+            width: 100%;
+            height: 50%;
+    
+            .event {
+                font-size: 30px;
+                text-align: center;
+            }
+    
+            .cards-box {
+                width: 100%;
+                height: 60%;
+                display: flex;
+                justify-content: space-evenly;
+                
+    
+                .card {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 20%;
+                    height: 100%;
+                    border: 2px solid rgba(0, 0, 0, 0.41);
+    
+                    p {
+                        text-align: center;
+                    }
+    
+                    .number {
+                        font-size: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.animation {
+    animation: show 1s forwards;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(110%);
+    }
+}

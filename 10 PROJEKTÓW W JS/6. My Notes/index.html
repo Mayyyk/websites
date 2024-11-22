@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Notes</title>
+    <script src="https://kit.fontawesome.com/d518b40244.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top">
+            <div class="logo">
+                <p><i class="fa-solid fa-note-sticky"></i> MyNotes</p>
+            </div>
+            <div class="main-buttons">
+                <button class="add"><i class="fa-solid fa-plus"></i> Dodaj</button>
+                <button class="delete-all"><i class="fa-solid fa-trash-can"></i> Usuń wszystkie</button>
+            </div>
+        </div>
+        <div class="popup">
+            <h1>Dodaj notatkę</h1>
+            <label for="category">Wybierz kategorię</label>
+            <select id="category">
+                <option value="choose" disabled selected>--Wybierz kategorię--</option>
+                <option value="work">Praca</option>
+                <option value="shopping">Zakupy</option>
+                <option value="other">Inne</option>
+            </select>
+            <label for="text">Wpisz treść notatki</label>
+            <textarea id="text" cols="30" rows="10"></textarea>
+            <p class="error">Uzupełnij wszysktie pola!</p>
+            <div class="popup-buttons">
+                <button class="save"><i class="fa-solid fa-floppy-disk"></i> Zapisz</button>
+                <button class="cancel"><i class="fa-regular fa-rectangle-xmark"></i> Anuluj</button>
+            </div>
+        </div>
+        <div class="notes-box">
+
+
+        </div>
+    </div>
+    <script src="/main.js"></script>
+</body>
+</html>

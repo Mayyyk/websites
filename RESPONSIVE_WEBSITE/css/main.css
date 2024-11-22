@@ -1,0 +1,238 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    --positioning: translate(-50%, -50%);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.hero_bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+}
+
+.hero_text{
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   color: #fff;
+}
+
+.hero_text h1 {
+    margin-bottom: 5px;
+    text-shadow: 3px 3px 5px #000;
+    color: #ddd;
+}
+
+.hero_text span {
+    text-transform: uppercase;
+    color: #09f;
+}
+
+.section_title {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+/* nawigacja */
+
+nav {
+    position: sticky;
+    top: 0;
+    height: 60px;
+    line-height: 60px;
+    background-color: #ddd;
+    text-align: center;
+    z-index: 10;
+}
+
+.burger_icon {
+    display: block;
+    margin-left: auto;
+    padding: 0 30px;
+    font-size: 30px;
+    line-height: 60px; 
+    border: none;
+    background-color: none;
+    cursor: pointer;
+}
+
+.nav_items{
+    display: none;
+}
+
+/* header */
+
+.header {
+    position: relative;
+    background-image: url("../img/hero_small.jpg");
+    height: 330px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* main */
+
+main {
+    margin: 60px 0;
+}
+
+/* o nas */
+
+.about_us_info {
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
+
+/* produkty */
+
+.products {
+    margin: 60px auto;
+}
+
+.product h3 {
+    text-transform: uppercase;
+    transition: transform 0.3s;
+}
+
+.product {
+    position: relative;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.product:hover > div > h3 {
+    transform: scale(1.5);
+}
+
+.first_product {
+    background-image: url("../img/children-g17aa048a0_640.jpg");
+}
+
+.second_product {
+    background-image: url("../img/keyboard-ga8470d05b_640.jpg");
+}
+
+.third_product {
+    background-image: url("../img/woman-g18030b798_640.jpg");
+}
+
+.fourth_product {
+    background-image: url("../img/laptop-g80946a58a_640.jpg");
+}
+
+
+/* kontakt */
+
+.contact {
+    text-align: center;
+}
+
+.contact h3 {
+    margin: 20px 0 5px;
+    text-transform: uppercase;
+}
+
+/* footer */
+
+footer {
+    padding: 30px 10px;
+    text-align: center;
+    background-color: #ddd;
+}
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+    .burger_icon{
+        display: none;
+    }
+    
+    .nav_items {
+        display: block;
+    }
+    
+    .nav_items a {
+        padding: 0 30px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #333;
+        transition: color 0.3s;
+    }
+
+    .nav_items a:hover  {
+        color: #09f;
+    }
+
+    .header {
+        position: relative;
+        background-image: url("../img/hero_big.jpg");
+        height: 400px;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .hero_text h1 {
+        font-size: 36px;
+    }
+
+    .hero_text p {
+        font-size: 18px;
+    }
+
+    .product h3 {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 992px) {
+    .products_box {
+        font-size: 0;
+    }
+
+    .product {
+        display: inline-block;
+        width: 50%;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .hero_text h1 {
+        font-size: 42px;
+    }
+
+    .hero_text p {
+        font-size: 20px;
+    }
+
+}
