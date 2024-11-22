@@ -1,0 +1,56 @@
+@media (min-width: 576px) {
+    .info {
+        grid-template-columns: 1fr 1fr;
+        padding: 10em 2em;
+
+        &__box {
+            display: grid;
+            justify-content: end;
+            grid-column: 2/3;
+        }
+
+        &__title {
+            padding: 0 1em;
+            grid-column: 1/2;
+        }
+
+        &__box-img, &__box-text {
+            min-width: 500px;
+        }
+
+        &__bg-icon {
+            position: absolute;
+            display: block;
+            opacity: .05;
+            z-index: -5;
+
+            &--one {
+                top: 17%;
+                left: 5%;
+                width: 20%;
+                animation: rotate-right 160s infinite linear;
+            }
+
+            &--two {
+                bottom: 10%;
+                left: 10%;
+                width: 30%;
+                animation: rotate-left 140s infinite linear;
+            }
+
+            &--three {
+                top: 30%;
+                left: 13%;
+                width: 50%;
+                animation: rotate-right 140s infinite linear;
+            }
+
+            &--four {
+                bottom: 30%;
+                left: -7%;
+                width: 15%;
+                animation: rotate-left 120s infinite linear;
+            }
+        }
+    }
+}

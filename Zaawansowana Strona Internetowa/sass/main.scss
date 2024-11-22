@@ -1,0 +1,460 @@
+@import 'colors';
+@import 'animation';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-padding-top: 72px;
+}
+
+body {
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+    background-color: $bg-color;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.underline {
+    margin: 0 auto 40px;
+    width: 60px;
+    height: 4px;
+    background-color: $main-color;
+}
+
+.blue-text {
+    color: $main-color;
+}
+
+.shadow-bg {
+    background-color: rgba(0, 0, 0, .8);
+}
+
+nav {
+	width: 100%;
+	text-transform: uppercase;
+	transition: background-color 0.3s;
+	z-index: 2;
+    .fa-bars-staggered {
+        padding: 10px;
+    }
+}
+
+.navbar-nav {
+	
+	.nav-link, i {
+		color: $white;
+	}
+	.nav-link.active {
+		color: $main-color;
+	}
+}
+
+.navbar-brand {
+	color: $white;
+	font-weight: bold;
+}
+
+.nav-link:hover {
+	color: $main-color;
+}
+
+.nav-link.active:hover {
+	color: $main-color;
+}
+
+.navbar-brand:hover {
+	color: $main-color;
+}
+
+header {
+    color: $white;
+
+    h1 {
+        font-size: 30px;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .hero-img {
+        position: relative;
+        height: 100vh;
+        background-image: url('../img/header-mini.jpg');
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        z-index: 0;
+    }
+
+    .hero-shadow {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .8);
+        z-index: -10;
+    }
+
+    .hero-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        padding: 10px;
+        text-align: center;
+        z-index: 5;
+    }
+
+    .btn-outline-light {
+        text-transform: uppercase;
+    }
+
+    .fa-chevron-down {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 20px;
+        font-size: 30px;
+        color: $white;
+    }
+
+}
+
+//o nas
+
+.aboutus {
+    i {
+        margin-top: 20px;
+        font-size: 30px;
+    }
+
+    .aboutus-card-title {
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+
+    .aboutus-card-text {
+        font-size: 14px;
+    }
+
+    .aboutus-hover:hover {
+        color: $main-color;
+    }
+}
+
+//tworzmy gry
+
+.creating-games {
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    position: relative;
+    background-image: url('../img/procesor-small.jpg');
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+
+    .platforms-title {
+        margin-bottom: 7px;
+    }
+
+    .hero-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.6);
+        z-index: -1;
+    }
+
+    .creating-games-hero-item {
+        margin: 10px 0px;
+        i {
+            font-size: 36px;
+        }
+        .platforms-title {
+            font-size: 24px;
+        }
+    }
+}
+
+//portfolio
+
+.portfolio{
+    .carousel-indicators {
+        padding-bottom: 20px;
+    }
+
+    .carousel-item {
+        position: relative;
+        height: 600px;
+    }
+
+    .carousel-caption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,.8);
+        padding: 40px 0;
+    }
+}
+
+// ceny
+
+.prices {
+    .container {
+        .option-tables {
+        justify-content: space-around;
+        text-align: center;
+        }
+
+        .price-box {
+            margin: 20px;
+            padding: 10px;
+            background-color: $white;
+            box-shadow: 5px 5px 5px rgb(0,0,0,.55);
+            transition: transform .2s;
+            
+            i {
+                font-size: 20px;
+            }
+
+            h3 {
+                color: $main-color;
+                text-transform: uppercase;
+                font-size: 30px;
+            }
+
+            button {
+                text-transform: uppercase;
+            }
+        }
+
+        .price-box:hover {
+            transform: scale(1.1);
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+        .price-tag {
+            font-size: 27px;
+            font-weight: bold;
+        }
+    }
+
+    ul {
+        padding: 0;
+        margin-top: 20px;
+        list-style: none;
+
+        li {
+            margin: 7px 0;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+    
+    p {
+        text-align: center;
+        font-size: 12px;
+    }
+}
+
+//team
+
+.team {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-image: url("/img/office-big.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 0;
+    
+    h2 {
+        color: $bg-color;
+    }
+
+    .hero-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        background: rgba(0,0,0,.7);
+        z-index: -5;
+    }
+
+    .card-group{
+        .card {
+            margin: 0 10px;
+            transition: transform .2s;
+            .card-body{
+                height: 160px;
+            }
+            img {
+                height: 300px;
+                object-fit: cover;
+            }
+            i{
+                padding: 10px;
+            }
+        }
+
+        .card:hover{
+            transform: scale(0.9);
+        }
+
+        .card-title{
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .card-footer{
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+}
+
+//osiągnięcia
+
+.achievements {
+    text-align: center;
+    text-transform: uppercase;
+    i {
+        margin-bottom: 7px;
+        font-size: 30px;
+        color: $white;
+        text-shadow: 0 0 5px #000;
+    }
+    .achievements-list{
+        padding: 20px 0;
+    }
+    span {
+        font-size: 22px;
+    }
+}
+
+//kontakt
+
+.contact {
+    position: relative;
+    background-image: url("../img/contact-big.jpg");
+    background-position: bottom;
+    background-attachment: fixed;
+    background-size: cover;
+    color: $white;
+    z-index: 0;
+    h2{
+        font-weight: bold;
+    }
+
+    h3{
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .social-media{
+        a{
+            padding: 10px;
+            font-size: 25px;
+            color: $white;
+            transition: color 0.15s;
+        }
+        a:hover {
+            color: $main-color;
+        }
+    }
+    .underline {
+        background-color: $white;
+    }
+    .contact-bg{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background-color: rgba(0,0,25,.8);
+        z-index: -5;
+    }
+    .contact-us {
+        display: flex;
+        align-items: center;
+    }
+    .contact-item {
+        margin: 30px 0;
+    }
+}
+
+//footer
+
+
+
+
+
+
+
+
+
+@media(min-width: 375px) {
+    header {
+        h1 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+}
+
+@media(min-width: 768px) {
+    header {
+        h1 {
+            font-size: 42px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    }
+}
+
+@media(min-width: 992px) {
+    .creating-games {
+        background-image: url('../img/procesor-small.jpg');
+    }
+
+    .prices {
+
+        .special {
+            font-size: 16px;
+        }
+    }
+}
+
+@media(min-width: 1200px) {
+    header {
+        .hero-img {
+            background-image: url('../img/header-big.jpg');
+        }
+    }
+}

@@ -1,0 +1,229 @@
+@use "colors" as colors;
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+//gobalne
+
+body {
+	position: relative;
+	font-family: 'Nunito', sans-serif;
+	background-color: #444;
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.underline {
+	margin: 0 auto 40px;
+	width: 60px;
+	height: 4px;
+	background-color: colors.$main_color;
+}
+
+.blue_text {
+	color: colors.$main-color;
+}
+
+.shadow_bg {
+	background-color: rgba(0,0,0,.8);
+	transition: background-color 0.3s;
+}
+
+// nawigacja
+
+nav {
+	width: 100%;
+	text-transform: uppercase;
+	transition: background-color 0.3s;
+	z-index: 1;
+    .fa-bars-staggered {
+        padding: 10px;
+    }
+}
+
+.navbar-nav {
+	
+	.nav-link, i {
+		color: colors.$white;
+	}
+	.nav-link.active {
+		color: colors.$main-color;
+	}
+}
+
+.navbar-brand {
+	color: colors.$white;
+	font-weight: bold;
+}
+
+.nav-link:hover {
+	color: colors.$main-color;
+}
+
+.nav-link.active:hover {
+	color: colors.$main-color;
+}
+
+.navbar-brand:hover {
+	color: colors.$main-color;
+}
+
+// header
+
+header{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-color: #fff;
+	color: #fff;
+
+	.hero_img {
+		position: relative;
+		height: 100vh;
+		width: 100%;
+		background-image: url('../img/playstation-gc921bf040_640.jpg');
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: 0;
+	}
+	.hero_text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 10px;
+		height: 100%;
+		font-size: 50px;
+		color: #fff;
+		text-transform: uppercase;
+		flex-direction: column;
+	}
+	p {
+		font-size: 14px;
+		text-align: center;
+		text-transform: none;
+	}
+	h1 {
+		padding: 0 20px;
+		text-align: center;
+		font-size: 30px;
+	}
+	.hero_bg {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background-color: rgba(0,0,0,.8);
+		z-index: -1;
+	}
+
+	.btn-outline-light{
+		text-transform: uppercase;
+	}
+
+	.fa-chevron-down {
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		transform: translate(-50%);
+		font-size: 30px;
+		color: #fff;
+	}
+
+}
+
+//about us
+
+.about_us { 
+	i {
+		margin-top: 20px;
+		font-size: 30px;
+	}
+
+	.about_us_card_title {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+	
+	.about_us_card_text {
+		font-size: 14px;
+	}
+
+	.aboutus-hover:hover{
+		cursor: pointer;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// breakpoints
+
+@media (min-width: 375px) {
+	header {
+		h1 {
+			font-size: 36px;
+		}
+		p {
+			font-size: 16px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	header {
+		h1 {
+			font-size: 45px;
+		}
+		p {
+			font-size: 20px;
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	header {
+		h1 {
+			font-size: 50px;
+		}
+		p {
+			font-size: 25px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	header {
+		.hero_img {
+			background-image: url('../img/playstation-ge365e9baf_1920.jpg');
+		}
+	}
+}
+
